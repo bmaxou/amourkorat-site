@@ -1,0 +1,19 @@
+
+/* Palette reprise du site korat.fr d'origine (relevée sur l'archive Wayback) :
+   fond #F3FFEE, titre #20124D, sous-titre #CC667B, liens #CC0000, texte #0C0425, police Verdana. */
+body { font-family: Verdana, Geneva, sans-serif; background:#F3FFEE; color:#0C0425; margin:0; padding:0; line-height:1.6; }
+.site-header { background:#F3FFEE; padding:2rem 2rem 1rem; text-align:left; border-bottom:1px solid #d8e8cf; }
+.site-title { color:#20124D; font-size:2.4rem; text-decoration:none; font-weight:bold; display:block; }
+.site-subtitle { margin:.4rem 0 0; font-size:1.1rem; color:#CC667B; }
+.breadcrumb { padding:.7rem 2rem; background:#eaf5e2; font-size:.85rem; }
+.breadcrumb a { color:#CC0000; text-decoration:none; }
+.breadcrumb a:hover { text-decoration:underline; }
+.page-content { max-width:760px; margin:2rem auto; padding:0 2rem; background:#ffffff; border:1px solid #d8e8cf; border-radius:4px; }
+.page-content { padding:1.5rem 2rem 2rem; }
+.page-content h1 { color:#0C0425; font-size:1.5rem; border-bottom:2px solid #CC0000; padding-bottom:.4rem; }
+.page-list, .category-list { list-style:disc; padding-left:1.4rem; }
+.page-list li, .category-list li { padding:.35rem 0; }
+.page-list a, .category-list a { color:#CC0000; text-decoration:none; font-size:1.02rem; }
+.page-list a:hover, .category-list a:hover { text-decoration:underline; }
+.source { font-size:.85rem; color:#6b6b6b; margin-top:2rem; }
+.site-footer { text-align:center; padding:1.5rem; color:#6b6b6b; font-size:.8rem; }
