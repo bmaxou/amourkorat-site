@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_COOKIE} !korat_ok=1
+RewriteCond %{REQUEST_URI} !^/gate\.php$
+RewriteRule ^(.*)$ /gate.php [L]
