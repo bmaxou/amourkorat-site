@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Aperçu privé — KORAT le chat zen</title>
+<style>
+  :root {
+    color-scheme: light dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3ede4;
+    color: #2a241d;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 24px;
+  }
+  .card {
+    max-width: 380px;
+    width: 100%;
+    background: #fffdf9;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    padding: 36px 32px;
+    text-align: center;
+  }
+  .card img {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    margin: 0 0 6px;
+  }
+  p.sub {
+    margin: 0 0 24px;
+    color: #6b6255;
+    font-size: 0.95rem;
+  }
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1rem;
+    border: 1px solid #d8cfc0;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    text-align: center;
+    letter-spacing: 0.15em;
+  }
+  button {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background: #8a6d4f;
+    color: #fff;
+    cursor: pointer;
+  }
+  button:hover { background: #765c40; }
+  .error {
+    color: #b13c3c;
+    font-size: 0.88rem;
+    margin-top: 12px;
+    min-height: 1.2em;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #1c1a17; color: #ece6da; }
+    .card { background: #262320; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    p.sub { color: #a89e8d; }
+    input[type="password"] { background: #1c1a17; color: #ece6da; border-color: #443f37; }
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Aperçu privé</h1>
+  <p class="sub">Ce site est en construction et n'est pas encore public.<br>Merci de saisir le code d'accès.</p>
+  <form id="gate-form" autocomplete="off">
+    <input type="password" id="gate-pass" inputmode="numeric" placeholder="Code d'accès" autofocus>
+    <button type="submit">Accéder au site</button>
+    <div class="error" id="gate-error"></div>
+  </form>
+</div>
+<script>
+(function(){
+  var form = document.getElementById('gate-form');
+  var input = document.getElementById('gate-pass');
+  var errorEl = document.getElementById('gate-error');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (input.value.trim() === '1024') {
+      try { localStorage.setItem('korat_ok', '1'); } catch (err) {}
+      var params = new URLSearchParams(location.search);
+      var next = params.get('next') || '/';
+      location.replace(next);
+    } else {
+      errorEl.textContent = 'Code incorrect.';
+      input.value = '';
+      input.focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>
