@@ -17,3 +17,4 @@ body { font-family: Verdana, Geneva, sans-serif; background:#F3FFEE; color:#0C04
 .page-list a:hover, .category-list a:hover { text-decoration:underline; }
 .source { font-size:.85rem; color:#6b6b6b; margin-top:2rem; }
 .site-footer { text-align:center; padding:1.5rem; color:#6b6b6b; font-size:.8rem; }
+.plant-photo { max-width:280px; height:auto; display:block; margin:1rem 0; border:1px solid #d8e8cf; border-radius:4px; }
