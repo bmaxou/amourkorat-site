@@ -1,17 +1,37 @@
 <?php
 $hash = '$2y$12$D0DHPo27TpwkYzHtesj4a.EARPRv8gvxvXtbML/Tfu9s/Hj2DnoWG';
 $msg = '';
+$success_redirect = null;
 if (isset($_POST['pwd'])) {
     if (password_verify($_POST['pwd'], $hash)) {
         setcookie('korat_ok', '1', time() + 60*60*24*30, '/');
-        $redirect = isset($_POST['redirect']) && $_POST['redirect'] !== '' ? $_POST['redirect'] : '/';
-        header('Location: ' . $redirect);
-        exit;
+        $success_redirect = isset($_POST['redirect']) && $_POST['redirect'] !== '' ? $_POST['redirect'] : '/';
     } else {
         $msg = 'Mot de passe incorrect.';
     }
 }
 $current = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/';
+
+if ($success_redirect !== null) {
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accès autorisé — AmourKorat.com</title>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<script>
+try { localStorage.setItem('korat_ok', '1'); } catch (e) {}
+location.replace(<?php echo json_encode($success_redirect); ?>);
+</script>
+</body>
+</html>
+<?php
+exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
