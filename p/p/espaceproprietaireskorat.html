@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr" style="height: 100%;"><head>
+<meta charset="UTF-8">
+<script>(function(){var p=location.pathname;if(p.length<9||p.substr(p.length-9)!=="gate.html"){try{if(localStorage.getItem("korat_ok")!=="1"){location.replace("/gate.html?next="+encodeURIComponent(location.pathname+location.search));}}catch(e){}}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>AmourKorat.com</title>
+<style>
+
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+body {
+  background-color:#6fc6e6;
+  color:#333333;
+  font-family: Georgia, Utopia, "Palatino Linotype", Palatino, serif;
+  font-size:15px;
+  line-height:1.5;
+}
+a { color:#CC3300; text-decoration:none; }
+a:hover { text-decoration:underline; }
+.top-band {
+  background: linear-gradient(#5fc0e6, #7ecbe9);
+  padding-bottom: 40px;
+  position:relative;
+  overflow:hidden;
+}
+.top-band:after{
+  content:"";
+  display:block;
+  height:36px;
+  background: repeating-linear-gradient(90deg, #8fd14f 0 6px, #7bc943 6px 12px);
+  margin-top:20px;
+}
+.header {
+  max-width:1100px;
+  margin:0 auto;
+  padding:46px 20px 20px;
+  text-align:center;
+}
+.header h1 {
+  color:#ffffff;
+  font-size:58px;
+  font-weight:normal;
+  margin:0 0 14px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  letter-spacing:0.5px;
+}
+.header .tagline {
+  color:#33475a;
+  font-size:16px;
+  margin-bottom:26px;
+}
+nav.main-nav {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+nav.main-nav a {
+  font-size:19px;
+  padding:6px 20px;
+  border-left:1px solid rgba(51,51,51,0.3);
+  color:#CC3300;
+}
+nav.main-nav a:first-child { border-left:none; }
+.content-band {
+  background:#8dc63f;
+  background-image: linear-gradient(#8dc63f, #7cb83a);
+}
+.content-wrap {
+  max-width:1100px;
+  margin:0 auto;
+  padding:40px 20px 60px;
+  display:flex;
+  gap:40px;
+  flex-wrap:wrap;
+  align-items:flex-start;
+}
+main { flex:2; min-width:300px; }
+aside { flex:1; min-width:250px; }
+.post { background:rgba(255,255,255,0.35); border-radius:8px; padding:22px 26px; margin-bottom:34px; }
+.post-date { color:#33540f; font-style:italic; margin-bottom:8px; font-size:14px; }
+.post-title { font-size:24px; margin:0 0 14px; color:#3a3a3a; }
+.post-body p { margin:0 0 14px; }
+.post-body img { max-width:100%; height:auto; border-radius:4px; margin:10px 0; display:block; }
+.post-share { font-size:12px; color:#4a4a4a; margin-top:10px; }
+.post-nav { display:flex; justify-content:space-between; gap:16px; margin:0 0 30px; font-size:14px; }
+.video-embed { position:relative; padding-bottom:56.25%; height:0; overflow:hidden; margin:14px 0; border-radius:4px; background:#000; }
+.video-embed iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
+.page-content img { max-width:100%; height:auto; border-radius:4px; margin:10px 0; display:block; }
+.older-link { text-align:center; margin:20px 0 0; font-size:16px; }
+.widget { background:rgba(255,255,255,0.5); border-radius:8px; padding:18px 20px; margin-bottom:22px; }
+.widget h3 { margin-top:0; font-size:16px; color:#2e2e2e; }
+.widget input, .widget textarea {
+  width:100%; padding:8px; margin-bottom:10px; border:1px solid #a9d18f; border-radius:4px; font-family:inherit; font-size:14px;
+}
+.widget button {
+  background:#CC3300; color:#fff; border:none; padding:8px 20px; border-radius:4px; cursor:pointer; font-family:inherit;
+}
+.widget ul { list-style:none; padding:0; margin:0; }
+.widget ul li { margin-bottom:6px; font-size:14px; }
+.widget select { width:100%; padding:6px; border-radius:4px; border:1px solid #a9d18f; }
+.page-content { background:rgba(255,255,255,0.35); border-radius:8px; padding:28px 32px; }
+.page-content h1 { font-size:28px; margin-top:0; color:#2e2e2e; }
+.page-content p { margin:0 0 14px; }
+footer {
+  text-align:center;
+  padding:26px 20px;
+  font-size:12px;
+  color:#2e3d20;
+  background:#7cb83a;
+}
+footer a { color:#2e3d20; text-decoration:underline; }
+.korat-fr-btn-wrap { text-align:center; margin:0 0 30px; }
+.korat-fr-btn {
+  display:inline-block; background:#33540f; color:#fff !important; text-decoration:none;
+  padding:14px 28px; border-radius:6px; font-size:16px; box-shadow:0 2px 4px rgba(0,0,0,0.2);
+}
+.korat-fr-btn:hover { background:#274008; text-decoration:none; }
+.korat-fr-note { text-align:center; font-size:12px; color:#2e3d20; margin-top:8px; }
+body.ak-locked > *:not(#ak-gate) { display:none !important; }
+#ak-gate { display:none; }
+body.ak-locked #ak-gate {
+  display:flex; align-items:center; justify-content:center; min-height:100vh;
+  background: linear-gradient(#5fc0e6, #7ecbe9); padding:20px;
+}
+#ak-gate-form {
+  background:#fff; border-radius:10px; padding:36px 30px; max-width:320px; width:100%;
+  text-align:center; box-shadow:0 4px 18px rgba(0,0,0,0.2); font-family: Georgia, serif;
+}
+#ak-gate-form h2 { margin:0 0 6px; color:#33475a; }
+#ak-gate-form p { margin:0 0 18px; color:#555; font-size:14px; }
+#ak-gate-form input {
+  width:100%; padding:12px; font-size:18px; text-align:center; letter-spacing:2px;
+  border:1px solid #bbb; border-radius:6px; margin-bottom:14px; box-sizing:border-box;
+}
+#ak-gate-form button {
+  width:100%; padding:12px; background:#CC3300; color:#fff; border:none; border-radius:6px;
+  font-size:16px; cursor:pointer;
+}
+#ak-gate-error { display:none; color:#c00; font-size:13px; margin:12px 0 0; }
+</style>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.zZZZhVqDDCw.L.W.O/am=BECAAQ/d=0/rs=AN8SPfreld5KM52lJgLi44qeAC03eRorPQ/m=el_main_css"></head>
+<body class="" style="position: relative; min-height: 100%; top: 0px;">
+
+<div id="ak-gate">
+  <form id="ak-gate-form">
+    <h2>AmourKorat.com</h2>
+    <p>Aperçu privé — mot de passe requis</p>
+    <input type="password" id="ak-gate-pw" placeholder="Mot de passe" autofocus="" inputmode="numeric">
+    <button type="submit">Voir le site</button>
+    <p id="ak-gate-error">Mot de passe incorrect</p>
+  </form>
+</div>
+
+
+<div class="top-band">
+  <div class="header">
+    <h1>AmourKorat.com</h1>
+    <div class="tagline">petit Elevage Familial parisien de plus de vingt ans : AmourKorat@gmail.com — 06 75 39 50 97</div>
+    <nav class="main-nav">
+      <a href="../index.html">Accueil</a>
+      <a href="qualite-elevage-korat.html">Elevage</a>
+<a href="qualite-parents-korat.html">Parents</a>
+<a href="qualite-des-chatons-amour-korat.html">Chatons</a>
+<a href="eleveurs-korat.html">Films</a>
+<a href="faq.html">FAQ</a>
+<a href="espaceproprietaireskorat.html">Propriétaires</a>
+    </nav>
+  </div>
+</div>
+<div class="content-band">
+  <div class="content-wrap">
+    <main>
+    <div class="page-content">
+      <h1>Espace Propriétaires</h1>
+    </div>
+    </main>
+    <aside>
+    <div class="widget">
+      <h3>Translate</h3>
+      <div id="google_translate_element"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo" aria-label="Widget de traduction"><option value="">Sélectionner une langue</option><option value="ab">Abkhaze</option><option value="ace">Aceh</option><option value="ach">Acholi</option><option value="aa">Afar</option><option value="af">Afrikaans</option><option value="sq">Albanais</option><option value="de">Allemand</option><option value="alz">Alur</option><option value="am">Amharique</option><option value="en">Anglais</option><option value="ar">Arabe</option><option value="hy">Arménien</option><option value="as">Assamais</option><option value="av">Avar</option><option value="awa">Awadhi</option><option value="ay">Aymara</option><option value="az">Azéri</option><option value="ba">Bachkir</option><option value="ban">Balinais</option><option value="bal">Baloutchi</option><option value="bm">Bambara</option><option value="bci">Baoulé</option><option value="eu">Basque</option><option value="btx">Batak Karo</option><option value="bts">Batak Simalungun</option><option value="bbc">Batak Toba</option><option value="bem">Bemba</option><option value="bn">Bengali</option><option value="bew">Betawi</option><option value="bho">Bhodjpouri</option><option value="bik">Bicol</option><option value="be">Biélorusse</option><option value="bs">Bosniaque</option><option value="bua">Bouriate</option><option value="br">Breton</option><option value="bg">Bulgare</option><option value="yue">Cantonais</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ch">Chamorro</option><option value="ny">Chichewa</option><option value="zh-CN">Chinois (simplifié)</option><option value="zh-TW">Chinois (traditionnel)</option><option value="chk">Chuuk</option><option value="si">Cinghalais</option><option value="ko">Coréen</option><option value="co">Corse</option><option value="ht">Créole haïtien</option><option value="mfe">Créole mauricien</option><option value="crs">Créole seychellois</option><option value="hr">Croate</option><option value="da">Danois</option><option value="fa-AF">Dari</option><option value="din">Dinka</option><option value="dyu">Dioula</option><option value="dv">Divéhi</option><option value="doi">Dogri</option><option value="dov">Dombe</option><option value="dz">Dzongkha</option><option value="es">Espagnol</option><option value="eo">Espéranto</option><option value="et">Estonien</option><option value="ee">Ewe</option><option value="fo">Féroïen</option><option value="fj">Fidjien</option><option value="fi">Finnois</option><option value="fon">Fon</option><option value="fr-CA">Français (Canada)</option><option value="fur">Frioulan</option><option value="fy">Frison</option><option value="gaa">Ga</option><option value="gd">Gaélique (Écosse)</option><option value="gl">Galicien</option><option value="cy">Gallois</option><option value="ka">Géorgien</option><option value="el">Grec</option><option value="gn">Guarani</option><option value="gu">Gujarati</option><option value="cnh">Hakha Chin</option><option value="ha">Haoussa</option><option value="haw">Hawaïen</option><option value="iw">Hébreu</option><option value="hil">Hiligaïnon</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hongrois</option><option value="hrx">Hunsrik</option><option value="iba">Iban</option><option value="ig">Igbo</option><option value="ilo">Ilocano</option><option value="id">Indonésien</option><option value="iu-Latn">Inuktut (latin)</option><option value="iu">Inuktut (syllabique)</option><option value="ga">Irlandais</option><option value="is">Islandais</option><option value="it">Italien</option><option value="ja">Japonais</option><option value="jw">Javanais</option><option value="kac">Jingpo</option><option value="kl">Kalaallisut</option><option value="kn">Kannada</option><option value="kr">Kanuri</option><option value="kk">Kazakh</option><option value="kha">Khasi</option><option value="km">Khmer</option><option value="cgg">Kiga</option><option value="kg">Kikongo</option><option value="rw">Kinyarwanda</option><option value="ky">Kirghiz</option><option value="ktu">Kituba</option><option value="trp">Kok Borok</option><option value="kv">Komi</option><option value="gom">Konkani</option><option value="kri">Krio</option><option value="ku">Kurde (Kurmandji)</option><option value="ckb">Kurde (Sorani)</option><option value="lo">Laotien</option><option value="ltg">Latgalien</option><option value="la">Latin</option><option value="lv">Letton</option><option value="lij">Ligure</option><option value="li">Limbourgeois</option><option value="ln">Lingala</option><option value="lt">Lituanien</option><option value="lmo">Lombard</option><option value="lg">Luganda</option><option value="luo">Luo</option><option value="lb">Luxembourgeois</option><option value="mak">Macassar</option><option value="mk">Macédonien</option><option value="mad">Madurais</option><option value="mai">Maïthili</option><option value="ms-Arab">Malais (Jawi)</option><option value="ms">Malaisien</option><option value="ml">Malayalam</option><option value="mg">Malgache</option><option value="mt">Maltais</option><option value="mam">Mam</option><option value="gv">Manx</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="chm">Mari des prairies</option><option value="mh">Marshallais</option><option value="mwr">Marwari</option><option value="yua">Maya yucatèque</option><option value="mni-Mtei">Meitei (Manipuri)</option><option value="min">Minangkabau</option><option value="lus">Mizo</option><option value="mn">Mongol</option><option value="my">Myanmar (Birman)</option><option value="nhe">Nahuatl (Huasteca oriental)</option><option value="ndc-ZW">Ndau</option><option value="nr">Ndébélé (Sud)</option><option value="nl">Néerlandais</option><option value="ne">Népalais</option><option value="new">Nepalbhasa (Newari)</option><option value="bm-Nkoo">NKo</option><option value="no">Norvégien</option><option value="nus">Nuer</option><option value="oc">Occitan</option><option value="or">Odia (Oriya)</option><option value="om">Oromo</option><option value="os">Ossète</option><option value="udm">Oudmourte</option><option value="ug">Ouïgour</option><option value="uz">Ouzbek</option><option value="ps">Pachtô</option><option value="pam">Pampangan</option><option value="pag">Pangasinan</option><option value="pa">Panjabi (Gurmukhi)</option><option value="pa-Arab">Panjabi (Shahmukhi)</option><option value="pap">Papiamento</option><option value="jam">Patois jamaïcain</option><option value="fa">Persan</option><option value="ff">Peul</option><option value="tl">Philippin</option><option value="pl">Polonais</option><option value="pt">Portugais (Brésil)</option><option value="pt-PT">Portugais (Portugal)</option><option value="kek">Q'eqchi'</option><option value="qu">Quechua</option><option value="rom">Romani</option><option value="ro">Roumain</option><option value="rn">Roundi</option><option value="ru">Russe</option><option value="se">Same (Nord)</option><option value="sm">Samoan</option><option value="sg">Sango</option><option value="sa">Sanskrit</option><option value="sat-Latn">Santali (latin)</option><option value="sat">Santali (ol chiki)</option><option value="nso">Sepedi</option><option value="sr">Serbe</option><option value="st">Sesotho</option><option value="shn">Shan</option><option value="sn">Shona</option><option value="scn">Sicilien</option><option value="szl">Silésien</option><option value="sd">Sindhî</option><option value="sk">Slovaque</option><option value="sl">Slovène</option><option value="so">Somali</option><option value="su">Soundanais</option><option value="sus">Soussou</option><option value="sv">Suédois</option><option value="sw">Swahili</option><option value="ss">Swati</option><option value="tg">Tadjik</option><option value="ty">Tahitien</option><option value="ber-Latn">Tamazight</option><option value="ber">Tamazight (Tifinagh)</option><option value="ta">Tamoul</option><option value="tt">Tatar</option><option value="crh">Tatar de Crimée (cyrillique)</option><option value="crh-Latn">Tatar de Crimée (latin)</option><option value="cs">Tchèque</option><option value="ce">Tchétchène</option><option value="cv">Tchouvache</option><option value="te">Telugu</option><option value="tet">Tétoum</option><option value="th">Thaï</option><option value="bo">Tibétain</option><option value="ti">Tigrigna</option><option value="tiv">Tiv</option><option value="tpi">Tok pisin</option><option value="to">Tongien</option><option value="tcy">Toulou</option><option value="tyv">Touvain</option><option value="lua">Tshiluba</option><option value="ts">Tsonga</option><option value="tn">Tswana</option><option value="tum">Tumbuka</option><option value="tr">Turc</option><option value="tk">Turkmène</option><option value="ak">Twi</option><option value="uk">Ukrainien</option><option value="ur">Urdu</option><option value="ve">Venda</option><option value="vec">Vénitien</option><option value="vi">Vietnamien</option><option value="war">Waray-waray</option><option value="wo">Wolof</option><option value="xh">Xhosa</option><option value="sah">Yakoute</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zap">Zapotèque</option><option value="zu">Zoulou</option></select></div>Fourni par&nbsp;<span style="white-space:nowrap"><a class="VIpgJd-ZVi9od-l4eHX-hSRGPd" href="https://translate.google.com" target="_blank"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Traduction">Traduction</a></span></div></div>
+    </div>
+    <div class="widget">
+      <h3>Contact</h3>
+      <form onsubmit="return false;">
+        <input type="text" placeholder="Nom">
+        <input type="email" placeholder="E-mail *">
+        <textarea rows="4" placeholder="Message *"></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+      <p style="font-size:13px;">Mail&nbsp;: <a href="mailto:AmourKorat@gmail.com">AmourKorat@gmail.com</a></p>
+      <p style="font-size:13px;">Youtube&nbsp;: <a href="http://www.youtube.com/amourkorat">youtube.com/AmourKorat</a></p>
+      <p style="font-size:13px;">Tél&nbsp;: <a href="tel:0675395097">06 75 39 50 97</a></p>
+    </div>
+    <div class="widget">
+      <h3>Archives</h3>
+      <ul>
+      <li><a href="../2020/12/decembre-2020-joyeux-noel-et-bon.html">décembre 2020 — Joyeux noël et bon passage à 2021 par avance !</a></li>
+<li><a href="../2020/04/korat-et-pandemie.html">avril 2020 — Korat et pandémie</a></li>
+<li><a href="../2020/04/adoption-korat-adulte.html">avril 2020 — Adoption Korat adulte</a></li>
+<li><a href="../2020/01/bonne-annee-korat-2020.html">janvier 2020 — Bonne année Korat 2020 !</a></li>
+<li><a href="../2019/01/blog-post.html">janvier 2019 — Bonne année Korat 2019 !</a></li>
+<li><a href="../2017/08/8-aout-journee-internationale-du-chat.html">août 2017 — 8 Août, journée internationale du chat</a></li>
+<li><a href="../2016/07/aller-les-bleus.html">juillet 2016 — Aller les bleus !</a></li>
+<li><a href="../2015/02/korat-adulte.html">février 2015 — Korat Adulte</a></li>
+<li><a href="../2014/12/1er-conte-avec-un-korat-comme-personnage.html">décembre 2014 — 1er conte avec un Korat comme personnage !</a></li>
+<li><a href="../2014/09/korat-automne.html">septembre 2014 — Automne</a></li>
+<li><a href="../2014/07/ete.html">juillet 2014 — Été</a></li>
+<li><a href="../2014/07/resume-en-une-page-dune-portee-amour.html">juillet 2014 — Résumé en une page d'une portée Amour Korat</a></li>
+<li><a href="../2014/06/korat-nouvelles.html">juin 2014 — Korat nouvelles</a></li>
+<li><a href="../2014/03/chatons-korat-reservables.html">mars 2014 — Korat timbré !</a></li>
+<li><a href="../2014/02/miaous-miaous-de-chatons.html">février 2014 — Miaous miaous de chatons</a></li>
+<li><a href="../2014/01/bonne-annee-2014.html">janvier 2014 — Bonne année 2014 !</a></li>
+<li><a href="../2013/12/chaton-korat-adoptable.html">décembre 2013 — Chaton Korat adoptable</a></li>
+<li><a href="../2013/11/chat-korat-dans-l-elevage.html">novembre 2013 — Chat Korat dans l'élevage</a></li>
+<li><a href="../2013/10/animal-expo.html">octobre 2013 — Animal Expo</a></li>
+<li><a href="../2013/09/cest-la-rentree.html">septembre 2013 — C'est la rentrée</a></li>
+<li><a href="../2013/08/en-vacances.html">août 2013 — Vacances</a></li>
+<li><a href="../2013/07/happy-news.html">juillet 2013 — Bonne nouvelle !</a></li>
+<li><a href="../2013/06/juin-2103-mises-jour-recentes-de.html">juin 2013 — Quelques nouvelles</a></li>
+<li><a href="../2013/05/mai.html">mai 2013 — Mai 2013</a></li>
+<li><a href="../2013/04/mars-2103-1er-mai-danger-tres-toxique.html">avril 2013 — Muguet toxique</a></li>
+<li><a href="../2013/03/condoleances.html">mars 2013 — Condoléances</a></li>
+<li><a href="../2013/03/paques-et-korat.html">mars 2013 — Pâques et Korat</a></li>
+<li><a href="../2013/01/2013-chatons.html">janvier 2013 — 2013 Chatons</a></li>
+      </ul>
+    </div>
+    </aside>
+  </div>
+</div>
+
+<div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="display: none; border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Texte d'origine</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Évaluez cette traduction</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Votre avis nous aidera à améliorer Google&nbsp;Traduction</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Bonne traduction" aria-label="Bonne traduction" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Mauvaise traduction" aria-label="Mauvaise traduction" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form></div></div></div>
+
+
+<div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
