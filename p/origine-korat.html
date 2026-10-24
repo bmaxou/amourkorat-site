@@ -164,13 +164,47 @@ footer a { color:#2e3d20; text-decoration:underline; }
     <aside>
     <div class="widget">
       <h3>Contact</h3>
-      <form onsubmit="return false;">
-        <input type="text" placeholder="Nom">
-        <input type="email" placeholder="E-mail *">
-        <textarea rows="4" placeholder="Message *"></textarea>
+      <form id="ak-contact-form">
+        <input type="text" name="nom" placeholder="Nom">
+        <input type="email" name="email" placeholder="E-mail *" required>
+        <textarea rows="4" name="message" placeholder="Message *" required></textarea>
+        <input type="text" name="site" value="" style="position:absolute;left:-9999px;" tabindex="-1" autocomplete="off">
         <button type="submit">Envoyer</button>
       </form>
-      <p style="font-size:13px;">Mail&nbsp;: <a href="mailto:AmourKorat@gmail.com">AmourKorat@gmail.com</a></p>
+      <p class="ak-contact-status" style="display:none;font-size:13px;margin-top:10px;"></p>
+      <script>
+      (function() {
+        var form = document.getElementById('ak-contact-form');
+        if (!form) return;
+        var status = form.parentNode.querySelector('.ak-contact-status');
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var btn = form.querySelector('button[type="submit"]');
+          btn.disabled = true;
+          status.style.display = 'none';
+          fetch('/contact.php', { method: 'POST', body: new FormData(form) })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+              status.style.display = 'block';
+              if (data.ok) {
+                status.style.color = '#1a7a1a';
+                status.textContent = 'Message envoyé, merci !';
+                form.reset();
+              } else {
+                status.style.color = '#a33';
+                status.textContent = data.error || "L'envoi a échoué.";
+              }
+            })
+            .catch(function() {
+              status.style.display = 'block';
+              status.style.color = '#a33';
+              status.textContent = "L'envoi a échoué, merci de réessayer.";
+            })
+            .finally(function() { btn.disabled = false; });
+        });
+      })();
+      </script>
+      <p style="font-size:13px;">Mail&nbsp;: <a href="mailto:contact@amourkorat.com">contact@amourkorat.com</a></p>
       <p style="font-size:13px;">Youtube&nbsp;: <a href="http://www.youtube.com/amourkorat">youtube.com/AmourKorat</a></p>
       <p style="font-size:13px;">Tél&nbsp;: <a href="tel:0675395097">06 75 39 50 97</a></p>
     </div>
