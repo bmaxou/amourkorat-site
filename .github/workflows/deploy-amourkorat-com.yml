@@ -12,6 +12,11 @@ jobs:
       - name: Recuperation du code
         uses: actions/checkout@v4
 
+      - name: Decompression du nouveau site
+        run: |
+          for z in nouveau-*.zip; do [ -f "$z" ] && unzip -o -q "$z" -d . ; done
+          true
+
       - name: Deploiement FTP vers OVH (amourkorat.com)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -27,3 +32,4 @@ jobs:
             **/.git*/**
             .github/**
             README.md
+            nouveau-*.zip
