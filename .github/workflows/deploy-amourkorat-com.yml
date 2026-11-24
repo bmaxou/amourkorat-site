@@ -17,12 +17,12 @@ jobs:
           for z in nouveau-*.zip; do [ -f "$z" ] && unzip -o -q "$z" -d . ; done
           true
 
-      - name: Deploiement FTP vers OVH (amourkorat.com)
+      - name: Deploiement FTP vers OVH (hebergement amourks, dossier amourkorat-git)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER_KORAT }}
-          username: ${{ secrets.FTP_USERNAME_KORAT }}
-          password: ${{ secrets.FTP_PASSWORD_KORAT }}
+          server: ftp.cluster131.hosting.ovh.net
+          username: amourks
+          password: ${{ secrets.FTP_PASSWORD_AMOURKS }}
           protocol: ftp
           port: 21
           server-dir: /amourkorat-git/
