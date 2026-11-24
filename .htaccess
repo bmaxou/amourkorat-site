@@ -3,3 +3,4 @@ RewriteCond %{HTTP_COOKIE} !korat_ok=1
 RewriteCond %{REQUEST_URI} !^/gate\.php$
 RewriteCond %{REQUEST_URI} !^/contact\.php$
 RewriteRule ^(.*)$ /gate.php [L]
+RewriteRule ^$ /gate.php [L]
