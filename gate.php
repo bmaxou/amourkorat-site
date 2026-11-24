@@ -30,28 +30,25 @@ exit;
 <title>Amour Korat · Site en préparation</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;font-family:Manrope,system-ui,sans-serif;color:#E6ECEE;background:#0E1417 radial-gradient(900px 500px at 20% 10%,#1E3A2E 0%,transparent 60%)}
-.box{width:100%;max-width:440px;background:rgba(23,32,37,.85);border:1px solid #2A373D;border-radius:22px;padding:40px 34px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.45)}
-svg{width:54px;height:54px;margin-bottom:10px}
-h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:2.3rem;margin:0}
-h1 em{color:#B9D27E;font-weight:500}
-p{color:#A8B6BC;margin:10px 0 26px;line-height:1.6}
-input{width:100%;padding:14px 16px;border-radius:12px;border:1px solid #2A373D;background:#101619;color:#E6ECEE;font:inherit;font-size:1rem;margin-bottom:14px}
-input:focus{outline:2px solid #7FC4A4}
-.b{display:block;width:100%;padding:14px;border-radius:999px;border:1px solid transparent;font:inherit;font-weight:600;font-size:1rem;cursor:pointer;margin-top:10px}
-.new{background:#E8F1E4;color:#14241C}.new:hover{background:#fff}
-.old{background:transparent;color:#E6ECEE;border-color:#4B5A61}.old:hover{border-color:#A8B6BC}
-.b small{display:block;font-weight:400;font-size:.78rem;opacity:.7}
-.err{color:#E59384;margin-bottom:12px}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;font-family:Inter,system-ui,sans-serif;color:#17242C;background:#D9E3E8}
+.box{width:100%;max-width:460px;background:#F5F7F8;border:1px solid #17242C;border-radius:2px;padding:44px 36px;text-align:center}
+h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:3rem;margin:0;line-height:1}
+p{color:#4A5A63;margin:14px 0 28px;line-height:1.6}
+input{width:100%;padding:14px 16px;border-radius:2px;border:1px solid #D3DCE1;background:#fff;color:#17242C;font:inherit;font-size:1rem;margin-bottom:14px}
+input:focus{outline:2px solid #34525F}
+.b{display:block;width:100%;padding:13px;border-radius:2px;border:1px solid #34525F;font-family:"Instrument Serif",Georgia,serif;font-size:1.45rem;cursor:pointer;margin-top:10px;line-height:1.1}
+.new{background:#34525F;color:#fff}.new:hover{background:#17242C}
+.old{background:transparent;color:#34525F}.old:hover{background:#E9EEF1}
+.b small{display:block;font-family:Inter,sans-serif;font-size:.78rem;opacity:.75;margin-top:3px}
+.err{color:#9B3B2E;margin-bottom:12px}
 </style>
 </head>
 <body>
 <form class="box" method="post">
-<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 43C15 36 6 29 6 19.5 6 13 10.6 8 16.6 8c3.2 0 5.6 1.5 7.4 4 1.8-2.5 4.2-4 7.4-4C37.4 8 42 13 42 19.5 42 29 33 36 24 43z" fill="#8FA3AD"/><ellipse cx="18" cy="21" rx="3" ry="3.4" fill="#9DBB5E"/><ellipse cx="30" cy="21" rx="3" ry="3.4" fill="#9DBB5E"/><ellipse cx="18" cy="21" rx="1" ry="2.6" fill="#1D272C"/><ellipse cx="30" cy="21" rx="1" ry="2.6" fill="#1D272C"/></svg>
-<h1>Amour <em>Korat</em></h1>
+<h1>Amour Korat</h1>
 <p>Le site est en préparation.<?php if (!$ok): ?> Saisissez le mot de passe, puis choisissez le site à ouvrir.<?php endif; ?></p>
 <?php if ($msg): ?><div class="err"><?php echo htmlspecialchars($msg); ?></div><?php endif; ?>
 <?php if (!$ok): ?><input type="password" name="pwd" placeholder="Mot de passe" autofocus aria-label="Mot de passe"><?php endif; ?>
